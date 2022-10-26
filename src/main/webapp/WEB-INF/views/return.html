@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trả sách</title>
+</head>
+<body>
+<a>Nhập mã sách cần trả</a>
+<form th:action="@{/return}" method="post" th:object="${user}">
+    <table>
+        <tr>
+            <td>
+                <input type="text" th:field="*{code}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Trả sách</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
